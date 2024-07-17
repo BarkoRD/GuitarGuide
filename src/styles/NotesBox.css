@@ -1,0 +1,43 @@
+@import url('./cssenv.css');
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* .judson-regular {
+  font-family: "Judson", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+.notesbox-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+
+  .noteboxheader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .notebox {
+      flex: 1;
+      font-size: 4vw;
+      height: calc(80vw / 7);
+      background: none;
+      border: 1px solid var(--main-color);
+      font-family: 'Judson', serif;
+      color: var(--main-color);
+
+      &:hover {
+        background-color: var(--main-color-hover2);
+        border-color: var(--main-color-hover2);
+        color: var(--text-color);
+      }
+    }
+
+    .notebox:first-child {
+      border-left-width: 2px;
+    }
+
+    .notebox:last-child {
+      border-right-width: 2px;
+    }
+  }
+}

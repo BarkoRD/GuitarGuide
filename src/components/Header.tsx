@@ -1,9 +1,14 @@
 import { ColorSelector } from './ColorSelector'
 import { MySvgComponent } from './UsaFlag'
 
-export const Header = () => {
+interface HeaderProps {
+  setLang: (lang: string) => void
+  lang: string
+}
+
+export const Header = ({ setLang, lang }: HeaderProps) => {
   return (
-    <nav>
+    <nav className="header">
       <div>
         <ColorSelector />
       </div>
@@ -16,10 +21,18 @@ export const Header = () => {
         <p>Guide</p>
       </div>
       <div className="noteswitch-container">
-        <div className="left">
+        <button
+          className={'left ' + (lang == 'A' ? 'activeleft' : '')}
+          onClick={() => setLang('A')}
+        >
           <MySvgComponent />
-        </div>
-        <div className="right">La</div>
+        </button>
+        <button
+          className={'right ' + (lang == 'B' ? 'activeright' : '')}
+          onClick={() => setLang('B')}
+        >
+          La
+        </button>
       </div>
     </nav>
   )

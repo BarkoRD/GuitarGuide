@@ -1,6 +1,6 @@
 export const ColorSelector = () => {
   return (
-    <button>
+    <button className="colorswitcher">
       <img src="colors.png" alt="select-webcolors-icon" />
     </button>
   )

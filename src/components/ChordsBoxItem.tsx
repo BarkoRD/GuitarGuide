@@ -1,15 +1,16 @@
 interface ChordsBoxItemProp {
   note: string
   chord: string
+  photosrc: string
 }
 
-export const ChordsBoxItem = ({ chord }: ChordsBoxItemProp) => {
+export const ChordsBoxItem = ({ chord, photosrc }: ChordsBoxItemProp) => {
   return (
     <div className="chorditem-container">
       <div className="chorditem-header">{chord}</div>
       <div className="chorditem-img">
         <img
-          src={`./notes/${chord[0].toLowerCase()}/${chord}.png`}
+          src={`./notes/${photosrc[0].toLowerCase()}/${photosrc}.png`}
           alt={`${chord} chord`}
         />
       </div>
