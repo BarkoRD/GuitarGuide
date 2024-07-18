@@ -1,11 +1,6 @@
 @import url('./cssenv.css');
 @import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* .judson-regular {
-  font-family: "Judson", serif;
-  font-weight: 400;
-  font-style: normal;
-} */
 .chords-container {
   border: 1px solid var(--main-color);
   border-block: 0px;
@@ -19,34 +14,16 @@
     flex: 1;
     padding: 10px;
     border: 1px solid var(--main-color);
+
+    .chorditem-header {
+      color: var(--main-color);
+    }
+    .chorditem-img {
+      svg {
+        path {
+          fill: var(--main-color);
+        }
+      }
+    }
   }
 }
-
-/* 
-chords-container
-
-<div className="chords-container">
-      {chordArray.map((chordItem, index) => {
-        return (
-          <ChordsBoxItem
-            key={index}
-            note={chord}
-            chord={lang == 'B' ? chordItem[0] : chordItem[1]}
-            photosrc={chordItem[1]}
-          />
-        )
-      })}
-    </div>
-
-ChordsBoxItem
-
-<div className="chorditem-container">
-      <div className="chorditem-header">{chord}</div>
-      <div className="chorditem-img">
-        <img
-          src={`./notes/${photosrc[0].toLowerCase()}/${photosrc}.png`}
-          alt={`${chord} chord`}
-        />
-      </div>
-    </div> 
-*/
